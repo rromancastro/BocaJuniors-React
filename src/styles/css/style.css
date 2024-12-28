@@ -1,0 +1,1245 @@
+@import url("https://fonts.googleapis.com/css2?family=Alfa+Slab+One&display=swap");
+@import url("https://db.onlinewebfonts.com/c/b82329475307e0380dc1ea23f0c35266?family=adineue+PRO");
+@import url("https://db.onlinewebfonts.com/c/c0cd6ec8ce6d2bbd315a13b62ed13550?family=AdihausDIN");
+@import url("https://fonts.googleapis.com/css2?family=Sofia+Sans+Extra+Condensed:ital,wght@0,1..1000;1,1..1000&display=swap");
+#nav {
+  background-color: #003391;
+  width: 100%;
+  height: 8vh;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 1;
+  align-items: center;
+  justify-content: center;
+  padding: 5px 20px;
+}
+
+#navBarBrand {
+  display: flex;
+  gap: 8px;
+}
+#navBarBrand img {
+  width: 34px;
+}
+#navBarBrand div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+#navBarBrand div h3 {
+  font-family: "adineue PRO";
+  color: #fafafa;
+  font-weight: 100;
+  font-size: 15px;
+}
+#navBarBrand div h4 {
+  color: #fafafa;
+  font-weight: 700;
+  font-family: "adineue PRO";
+  font-size: 18px;
+}
+
+#laMitadMas1 {
+  justify-self: center;
+  font-family: "Alfa Slab One", serif;
+  color: #F3B229;
+  font-size: 23px;
+}
+
+#navUtilities {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 10px;
+}
+
+#searchContainer {
+  display: flex;
+  align-items: center;
+  background-color: #02236D;
+  padding: 2px 5px;
+}
+#searchContainer input {
+  background-color: transparent;
+  border: none;
+  width: 200px;
+  color: #fafafa;
+  outline: none;
+  font-size: 14px;
+}
+#searchContainer input::placeholder {
+  color: #69758f;
+  font-family: "adineue PRO";
+}
+
+#searchIcon {
+  width: 13px;
+}
+
+#drawerHeader {
+  display: grid;
+  grid-template-columns: 46% 46%;
+  height: 50px;
+  align-items: center;
+}
+#drawerHeader img {
+  filter: grayscale(1);
+  width: 30px;
+}
+#drawerHeader img:nth-child(2) {
+  opacity: 0.7;
+}
+#drawerHeader img:nth-child(1) {
+  opacity: 0.7;
+  filter: brightness(0);
+}
+
+#drawerBody {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin-top: 20px;
+  font-size: 25px;
+}
+#drawerBody p {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid black;
+}
+#drawerBody p:hover {
+  box-shadow: 0 4px 0 0 black;
+}
+
+@media (max-width: 1024px) {
+  #nav {
+    height: 10vh;
+  }
+}
+@media (max-width: 768px) {
+  #searchContainer input {
+    width: 80px;
+  }
+}
+@media (max-width: 430px) {
+  #nav {
+    height: 6vh;
+  }
+  #laMitadMas1 {
+    font-size: 15px;
+  }
+  #searchContainer input {
+    font-size: 12px;
+    width: 30px;
+    height: 30px;
+  }
+}
+footer {
+  width: 100%;
+  height: 10vh;
+  background-color: #1D293E;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 1;
+  align-items: center;
+  padding: 0 20px;
+}
+footer div {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+footer div img {
+  width: 25px;
+  opacity: 0.7;
+}
+footer div h2 {
+  width: 100%;
+  text-align: center;
+  font-family: "Alfa Slab One", serif;
+  color: white;
+  opacity: 0.6;
+}
+footer div:nth-child(3) {
+  justify-content: flex-end;
+}
+footer div:nth-child(3) img {
+  width: 45px;
+  opacity: 0.7;
+}
+
+#homeBannerSection {
+  width: 100%;
+  height: 89vh;
+  background-image: url("../../assets/banners/bannerHome.png");
+  background-size: cover;
+  background-position: center;
+}
+#homeBannerSection div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+  position: absolute;
+  top: 30%;
+  left: 5%;
+}
+#homeBannerSection div p {
+  color: #fafafa;
+}
+#homeBannerSection div p:nth-child(1) {
+  font-size: 30px;
+  font-family: "AdihausDIN";
+}
+#homeBannerSection div p:nth-child(2) {
+  font-size: 45px;
+  letter-spacing: 2px;
+  font-weight: 700;
+}
+#homeBannerSection div p:nth-child(3) {
+  font-size: 30px;
+}
+#homeBannerSection div p:nth-child(4) {
+  font-size: 40px;
+  width: 180px;
+  text-align: center;
+  padding: 5px 0;
+  color: #0f0f0f;
+  background-color: #fafafa;
+}
+
+#homeMiniBanners {
+  display: grid;
+  background-color: #fafafa;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: 1;
+  padding: 0vw 4vw;
+  padding-bottom: 4vw;
+  gap: 15px;
+}
+#homeMiniBanners div {
+  box-shadow: 4px 4px 0px 0px black;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  height: 500px;
+  gap: 10px;
+}
+#homeMiniBanners div img {
+  height: 500px;
+  transition: 1s;
+  object-fit: cover;
+}
+#homeMiniBanners div h3 {
+  transition: 1s;
+  position: absolute;
+  bottom: 0;
+  font-size: 15px;
+  text-decoration: underline;
+  text-align: center;
+  color: #fafafa;
+  background-color: black;
+  width: 100%;
+  transition: opacity 1s, height 1s, padding-top 1s;
+  height: 20px;
+  opacity: 0;
+}
+#homeMiniBanners div:hover img {
+  transform: scale(1.03);
+}
+#homeMiniBanners div:hover h3 {
+  opacity: 1;
+  height: 50px;
+  padding-top: 20px;
+}
+
+#homeSecondSection {
+  padding: 2vw 4vw;
+  background-color: #fafafa;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+#homeSecondSection h2 {
+  font-size: 60px;
+  font-weight: 600;
+  align-self: self-start;
+}
+#homeSecondSection #categoriesHome {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: auto;
+  width: 100%;
+  gap: 35px;
+}
+#homeSecondSection #categoriesHome p {
+  border-bottom: 1px solid black;
+  font-size: 30px;
+  letter-spacing: 2px;
+  font-weight: 700;
+}
+#homeSecondSection #categoriesHome p:hover {
+  box-shadow: 0px 5px 0px 0px black;
+}
+
+#aeroReadyBanner {
+  width: 100%;
+  height: 87vh;
+  background-image: url(../../assets/banners/cavani.jpg);
+  background-size: cover;
+}
+
+#aeroReadyBannerContent {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 50%;
+  right: 5%;
+}
+
+#aeroReadyBannerBrand {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  align-items: center;
+}
+#aeroReadyBannerBrand h2 {
+  color: #fafafa;
+  font-size: 130px;
+  font-family: "Sofia Sans Extra Condensed", serif;
+  letter-spacing: 20px;
+  line-height: 0.8;
+}
+#aeroReadyBannerBrand img {
+  width: 100px;
+}
+
+#aeroReadyBannerEslogan {
+  color: #fafafa;
+  font-size: 20px;
+  align-self: flex-end;
+  font-family: "AdihausDIN";
+}
+#aeroReadyBannerEslogan span {
+  color: #0f0f0f;
+  background-color: #fafafa;
+  padding: 0 5px;
+  font-weight: 700;
+}
+
+@media (max-width: 1024px) {
+  #homeBannerSection {
+    height: 87vh;
+  }
+  #homeBannerSection div {
+    top: 40%;
+    gap: 0px;
+  }
+  #homeBannerSection div p:nth-child(1) {
+    font-size: 20px;
+  }
+  #homeBannerSection div p:nth-child(2) {
+    font-size: 40px;
+  }
+  #homeBannerSection div p:nth-child(3) {
+    font-size: 24px;
+  }
+  #homeBannerSection div p:nth-child(4) {
+    font-size: 30px;
+  }
+  #homeSecondSection h2 {
+    font-size: 50px;
+  }
+  #homeSecondSection #categoriesHome p {
+    font-size: 25px;
+  }
+  #aeroReadyBannerContent {
+    top: 40%;
+    right: 2%;
+  }
+  #aeroReadyBannerBrand {
+    gap: 20px;
+  }
+  #aeroReadyBannerBrand h2 {
+    font-size: 110px;
+    letter-spacing: 10px;
+  }
+  #aeroReadyBannerEslogan {
+    font-size: 17px;
+  }
+}
+@media (max-width: 768px) {
+  #homeBannerSection div {
+    width: 50%;
+    top: 35%;
+    gap: 4px;
+  }
+  #homeSecondSection h2 {
+    font-size: 40px;
+    margin-top: 20px;
+  }
+  #homeSecondSection #categoriesHome p {
+    font-size: 20px;
+  }
+  #aeroReadyBannerContent {
+    top: 35%;
+    right: 2%;
+  }
+  #aeroReadyBannerBrand {
+    gap: 10px;
+  }
+  #aeroReadyBannerBrand img {
+    width: 70px;
+  }
+  #aeroReadyBannerBrand h2 {
+    font-size: 75px;
+    letter-spacing: 5px;
+  }
+  #aeroReadyBannerEslogan {
+    font-size: 12px;
+  }
+}
+@media (max-width: 430px) {
+  #homeBannerSection {
+    height: 30vh;
+  }
+  #homeBannerSection div {
+    top: 20%;
+  }
+  #homeBannerSection div p:nth-child(1) {
+    font-size: 16px;
+  }
+  #homeBannerSection div p:nth-child(2) {
+    font-size: 22px;
+  }
+  #homeBannerSection div p:nth-child(3) {
+    font-size: 17px;
+  }
+  #homeBannerSection div p:nth-child(4) {
+    font-size: 18px;
+    padding: 3px 0;
+  }
+  #homeMiniBanners {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 2;
+  }
+  #homeMiniBanners div h3 {
+    background-color: white;
+    color: #0f0f0f;
+    width: auto;
+    padding: 2px 5px;
+    font-size: 14px;
+    bottom: 10px;
+    left: 5px;
+    opacity: 1;
+  }
+  #homeSecondSection {
+    padding: 2vw 6vw;
+    margin-bottom: 20px;
+  }
+  #homeSecondSection h2 {
+    font-size: 40px;
+  }
+  #homeSecondSection #categoriesHome p {
+    font-size: 15px;
+  }
+  #aeroReadyBanner {
+    height: 25vh;
+  }
+  #aeroReadyBannerContent {
+    top: 40%;
+    right: 4%;
+  }
+  #aeroReadyBannerBrand {
+    gap: 10px;
+  }
+  #aeroReadyBannerBrand h2 {
+    font-size: 40px;
+    letter-spacing: 5px;
+  }
+  #aeroReadyBannerBrand img {
+    width: 40px;
+  }
+  #aeroReadyBannerEslogan {
+    font-size: 8px;
+  }
+}
+#productsByCategory {
+  background-color: #fafafa;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  padding: 3vw 4vw;
+}
+
+#productsByCategoryTitle {
+  font-size: 60px;
+  font-weight: 600;
+  letter-spacing: 2px;
+}
+
+#filterAndProducts {
+  display: grid;
+  grid-template-columns: 70% 30%;
+  gap: 20px;
+}
+
+#containerFiltrarYOrdenar h3 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  font-family: "AdihausDIN";
+  font-weight: 600;
+  border: 1px solid #0f0f0f;
+  color: #0f0f0f;
+  text-align: center;
+  padding: 20px;
+  font-size: 15px;
+}
+
+@media (max-width: 1024px) {
+  #productsByCategoryTitle {
+    font-size: 45px;
+  }
+  #filterAndProducts {
+    gap: 10px;
+  }
+  #containerFiltrarYOrdenar h3 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    font-family: "AdihausDIN";
+    font-weight: 600;
+    border: 1px solid #0f0f0f;
+    color: #0f0f0f;
+    text-align: center;
+    padding: 15px;
+    font-size: 12px;
+  }
+  #containerFiltrarYOrdenar .itemFilterAndSort {
+    font-size: 20px;
+  }
+}
+@media (max-width: 430px) {
+  #productsByCategoryTitle {
+    font-size: 40px;
+    margin-top: 20px;
+    text-align: center;
+  }
+  #filterAndProducts {
+    display: flex;
+    gap: 35px;
+    flex-direction: column-reverse;
+  }
+  #containerFiltrarYOrdenar h3 {
+    font-size: 15px;
+  }
+}
+#adidasOriginalsSection {
+  padding: 4vw;
+  background-color: #fafafa;
+  gap: 60px;
+  display: flex;
+  flex-direction: column;
+}
+#adidasOriginalsSection h1 {
+  padding: 0;
+  font-size: 35px;
+  font-family: "ITC Avant Garde Gothic";
+  font-weight: 700;
+  color: #0f0f0f;
+  position: absolute;
+}
+#adidasOriginalsSection #imagesAdidasOriginals {
+  display: grid;
+  width: 100%;
+  justify-content: space-between;
+  grid-template-columns: repeat(4, 23%);
+  grid-template-rows: 400px;
+}
+#adidasOriginalsSection #imagesAdidasOriginals img {
+  height: 350px;
+  width: 100%;
+  object-fit: cover;
+  object-position: top;
+}
+
+.imageOriginalsSkeleton:nth-child(1) {
+  align-self: flex-end;
+}
+.imageOriginalsSkeleton:nth-child(3) {
+  align-self: flex-end;
+}
+
+@media (max-width: 1024px) {
+  #adidasOriginalsSection h1 {
+    font-size: 25px;
+  }
+}
+@media (max-width: 768px) {
+  #adidasOriginalsSection {
+    gap: 20px;
+  }
+  #adidasOriginalsSection h1 {
+    font-size: 30px;
+    position: relative;
+  }
+}
+#productDetail {
+  width: 100%;
+  height: 86vh;
+  background-color: #fafafa;
+  padding: 10px 20px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: 1;
+  margin-bottom: 40px;
+}
+
+#productDetailImages {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: 1;
+  gap: 5px;
+}
+#productDetailImages img {
+  width: 100%;
+  height: 100%;
+  background-color: #EAEEEF;
+  object-fit: contain;
+}
+
+#productDetailInfo {
+  padding: 50px 40px;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+#productDetailInfo h1 {
+  font-size: 30px;
+  font-weight: 600;
+}
+#productDetailInfo #productDetailInfoCategoryAndGender {
+  color: #7d7d7d;
+  font-size: 14px;
+}
+#productDetailInfo #productDetailInfoBrand {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+#productDetailInfo #productDetailInfoBrand img {
+  filter: brightness(0.15);
+  width: 30px;
+}
+#productDetailInfo #productDetailInfoBrand h3 {
+  font-size: 15px;
+  font-family: "ITC Avant Garde Gothic";
+  font-weight: 600;
+  color: #2d2d2d;
+}
+#productDetailInfo #productDetailInfoPrice {
+  font-size: 40px;
+}
+#productDetailInfo #sizeSelectorContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+#productDetailInfo #productDetailInfoButton {
+  background-color: black;
+  width: 370px;
+  height: 40px;
+  box-shadow: 3px 3px 0 0 #fafafa, 4px 4px 0 0 rgb(0, 0, 0), 2px 4px 0 0 black, 4px 2px 0 0 black;
+  font-family: "adineue PRO";
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  transition: 0.3s;
+}
+#productDetailInfo #productDetailInfoButton p {
+  color: #fafafa;
+}
+#productDetailInfo #productDetailInfoButton:hover {
+  background-color: #fafafa;
+  border: 1px solid #0f0f0f;
+  box-shadow: 3px 3px 0 0 #0f0f0f, 4px 4px 0 0 rgb(0, 0, 0), 2px 4px 0 0 black, 4px 2px 0 0 black;
+}
+#productDetailInfo #productDetailInfoButton:hover #cartIcon {
+  fill: #0f0f0f;
+}
+#productDetailInfo #productDetailInfoButton:hover p {
+  color: #0f0f0f;
+}
+
+#personalizarJerseyButton {
+  background-color: #fafafa;
+  display: flex;
+  width: 100%;
+  height: 40px;
+  justify-content: center;
+  align-items: center;
+  padding: 30px;
+  border: 1px solid black;
+}
+#personalizarJerseyButton h2 {
+  font-size: 20px;
+  font-weight: 600;
+}
+
+#personalizarJersey {
+  background-color: #fafafa;
+  padding: 10px 20px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+#personalizarJersey img {
+  height: 400px;
+  width: 100%;
+  object-fit: contain;
+  background-color: #EAEEEF;
+}
+
+#personalizarJerseyUtilities {
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+#personalizarJerseyUtilities p {
+  font-size: 25px;
+  letter-spacing: 1px;
+  font-weight: 700;
+}
+#personalizarJerseyUtilities h3 {
+  font-size: 25px;
+}
+#personalizarJerseyUtilities h3 span {
+  color: rgb(195, 0, 0);
+  font-size: 13px;
+}
+#personalizarJerseyUtilities input {
+  background-color: #fafafa;
+  outline: none;
+  color: #0f0f0f;
+  font-family: "adineue PRO";
+  border: 1px solid black;
+  height: 30px;
+  padding: 0 10px;
+}
+
+#personalizarJerseyResultado {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+  gap: 20px;
+  top: 20%;
+  left: 38%;
+  width: 25%;
+  height: 200px;
+}
+#personalizarJerseyResultado p {
+  font-family: "Camisetas Font";
+  letter-spacing: 2px;
+  text-align: center;
+  font-size: 27px;
+}
+#personalizarJerseyResultado p:nth-child(2) {
+  font-size: 100px;
+}
+
+#personalizarJerseyColor {
+  display: flex;
+  gap: 10px;
+  flex-direction: column;
+}
+#personalizarJerseyColor h3 {
+  font-size: 25px;
+}
+#personalizarJerseyColor div {
+  display: flex;
+  gap: 10px;
+}
+#personalizarJerseyColor div button {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+}
+#personalizarJerseyColor div button:nth-child(1) {
+  background-color: #ebebeb;
+}
+#personalizarJerseyColor div button:nth-child(2) {
+  background-color: #06338D;
+}
+#personalizarJerseyColor div button:nth-child(3) {
+  background-color: black;
+}
+#personalizarJerseyColor div button:nth-child(4) {
+  background-color: #EACC00;
+}
+
+#productosRelacionados {
+  display: flex;
+  flex-direction: column;
+  padding: 3vw;
+  gap: 20px;
+}
+#productosRelacionados h2 {
+  font-size: 40px;
+  font-weight: 600;
+}
+
+@media (max-width: 1024px) {
+  #productDetail {
+    min-height: 84vh;
+  }
+  #productDetailImages {
+    grid-template-rows: 84vh;
+  }
+  #productDetailInfo {
+    gap: 15px;
+  }
+  #productDetailInfo h1 {
+    font-size: 26px;
+  }
+  #productDetailInfo #productDetailInfoCategoryAndGender {
+    font-size: 12px;
+  }
+  #productDetailInfo #productDetailInfoPrice {
+    font-size: 30px;
+  }
+  #productDetailInfo #sizeSelectorContainer div {
+    height: 30px;
+  }
+  #personalizarJerseyUtilities p {
+    font-size: 22px;
+  }
+  #personalizarJerseyUtilities h3 {
+    font-size: 20px;
+  }
+  #personalizarJerseyUtilities input {
+    height: 25px;
+  }
+  #productosRelacionados {
+    display: flex;
+    flex-direction: column;
+    padding: 3vw;
+    gap: 20px;
+  }
+  #productosRelacionados h2 {
+    font-size: 40px;
+    font-weight: 600;
+  }
+}
+@media (max-width: 768px) {
+  #productDetail {
+    height: 70vh;
+    min-height: 70vh;
+    margin-bottom: 20px;
+  }
+  #productDetailImages {
+    grid-template-rows: 70vh;
+  }
+  #productDetailInfo {
+    padding: 0 20px;
+    height: 70vh;
+    gap: 15px;
+  }
+  #productDetailInfo h1 {
+    font-size: 23px;
+  }
+  #productDetailInfo #productDetailInfoCategoryAndGender {
+    font-size: 11px;
+  }
+  #productDetailInfo #productDetailInfoPrice {
+    font-size: 27px;
+  }
+  #productDetailInfo #sizeSelectorContainer div {
+    height: 25px;
+    width: 70PX;
+  }
+  #productDetailInfo #sizeSelectorContainer div p {
+    font-size: 15px;
+  }
+  #productDetailInfo #productDetailInfoButton {
+    width: 100%;
+  }
+  #personalizarJerseyButton h2 {
+    font-size: 15px;
+  }
+  #personalizarJerseyUtilities {
+    gap: 14px;
+  }
+  #personalizarJerseyUtilities p {
+    font-size: 18px;
+  }
+  #personalizarJerseyUtilities h3 {
+    font-size: 17px;
+  }
+  #personalizarJerseyUtilities input {
+    height: 25px;
+  }
+  #productosRelacionados {
+    display: flex;
+    flex-direction: column;
+    padding: 5vw;
+    gap: 20px;
+  }
+  #productosRelacionados h2 {
+    font-size: 30px;
+    font-weight: 600;
+  }
+}
+@media (max-width: 430px) {
+  #productDetail {
+    display: flex;
+    flex-direction: column;
+  }
+  #productDetailImages {
+    height: 30vh;
+  }
+  #productDetailImages img {
+    height: 30vh;
+  }
+  #productDetailInfo {
+    padding: 0 10px;
+    gap: 20px;
+  }
+  #productDetailInfo h1 {
+    font-size: 25px;
+  }
+  #productDetailInfo #sizeSelectorContainer {
+    gap: 10px;
+  }
+  #productDetailInfo #sizeSelectorContainer div {
+    margin: 2px;
+  }
+  #personalizarJersey {
+    display: flex;
+    flex-direction: column;
+  }
+}
+#productsSearch {
+  display: grid;
+  padding: 3vw;
+  gap: 20px;
+  grid-template-columns: 70% 30%;
+}
+
+#cartView {
+  display: flex;
+  flex-direction: column;
+  min-height: 87vh;
+  padding: 4vw;
+}
+#cartView #cartViewInfo {
+  display: grid;
+  grid-template-columns: 65% 35%;
+  gap: 20px;
+}
+
+#productsView {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+#productCartView {
+  display: grid;
+  grid-template-columns: 10% 60% 30%;
+  gap: 10px;
+  background-color: rgb(242, 242, 242);
+  box-shadow: 3px 3px 0px 0px black;
+}
+#productCartView img {
+  padding: 10px;
+  width: 90px;
+  height: 90px;
+  object-fit: contain;
+  background-color: #EAEEEF;
+}
+
+#productCartViewInfo {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+}
+#productCartViewInfo h2 {
+  font-size: 20px;
+}
+#productCartViewInfo h3 {
+  font-size: 17px;
+}
+
+#subtotal {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+}
+#subtotal button {
+  background-color: #AF2A2A;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  border-radius: 5px;
+  justify-content: center;
+  align-items: center;
+}
+
+#quantitySelect {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+#quantitySelect button {
+  color: grey;
+}
+
+#cartViewTitle {
+  font-size: 40px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  margin-bottom: 20px;
+}
+
+#resumenPedido {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+#resumenPedido div {
+  display: flex;
+  justify-content: space-between;
+}
+#resumenPedido div p {
+  font-size: 15px;
+  font-family: "AdihausDIN";
+}
+#resumenPedido h2 {
+  font-size: 30px;
+  font-weight: 700;
+}
+#resumenPedido h3 {
+  font-weight: 700;
+  font-family: "AdihausDIN";
+  font-size: 22px;
+}
+#resumenPedido button {
+  background-color: black;
+  font-family: "AdihausDIN";
+  padding: 10px;
+  font-weight: 700;
+  box-shadow: 3px 3px 0px 0px #D1D1D1;
+  text-decoration: underline;
+}
+
+@media (max-width: 1024px) {
+  #cartView {
+    padding: 3vw;
+  }
+  #productCartViewInfo h2 {
+    font-size: 17px;
+  }
+  #productCartViewInfo h3 {
+    font-size: 14px;
+  }
+  #subtotal h3 {
+    font-size: 13px;
+  }
+  #subtotal button {
+    width: 24px;
+    height: 24px;
+  }
+}
+@media (max-width: 768px) {
+  #cartView {
+    padding: 6vw;
+  }
+  #cartView #cartViewInfo {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+  }
+}
+@media (max-width: 430px) {
+  #cartViewTitle {
+    text-align: center;
+  }
+  #productCartView {
+    display: grid;
+    grid-template-columns: 20% 60% 20%;
+    gap: 0px;
+  }
+  #productCartView img {
+    height: 100%;
+  }
+  #productCartViewInfo {
+    padding: 5px;
+    gap: 3px;
+  }
+  #productCartViewInfo h2 {
+    font-size: 14px;
+  }
+  #productCartViewInfo h3 {
+    font-size: 11px;
+  }
+  #subtotal {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-right: 10px;
+    gap: 0;
+  }
+  #subtotal button {
+    background-color: transparent;
+  }
+  #quantitySelect {
+    font-size: 15px;
+  }
+}
+#itemListContainer {
+  background-color: #fafafa;
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: auto;
+  gap: 10px;
+}
+
+@media (max-width: 1024px) {
+  #itemListContainer {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media (max-width: 430px) {
+  #itemListContainer {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+#itemCard {
+  display: grid;
+  height: 340px;
+  grid-template-columns: 1;
+  grid-template-rows: 80% 20%;
+  margin-bottom: 30px;
+  gap: 5px;
+}
+#itemCard img {
+  height: 300px;
+  width: 100%;
+  object-fit: contain;
+  background-color: #EAEEEF;
+}
+#itemCard div {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+#itemCard div h2 {
+  color: #0f0f0f;
+  font-weight: 300;
+  font-size: 14px;
+  letter-spacing: 1px;
+}
+#itemCard div h3 {
+  color: #7d7d7d;
+  font-size: 12px;
+  font-weight: 100;
+}
+#itemCard div h4 {
+  color: #7d7d7d;
+  font-size: 13px;
+}
+
+#loaderSpinner {
+  width: 40px;
+  height: 40px;
+  color: grey;
+}
+
+#loaderEscudo {
+  width: 15px;
+  position: absolute;
+  filter: grayscale(1);
+  opacity: 0.6;
+}
+
+#sizeSelector {
+  display: flex;
+  gap: 3px;
+  flex-wrap: wrap;
+}
+#sizeSelector div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 3px;
+  height: 40px;
+  width: 90px;
+  cursor: pointer;
+  transition: 0.2s;
+  background-color: #ECEFF1;
+}
+#sizeSelector div p {
+  color: black;
+  font-size: 18px;
+  font-family: "AdihausDIN";
+}
+#sizeSelector div:hover {
+  background-color: black;
+}
+#sizeSelector div:hover p {
+  color: rgb(189, 189, 189);
+}
+#sizeSelector .sizeSelected {
+  background-color: black;
+  border: none;
+}
+#sizeSelector .sizeSelected p {
+  color: white;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  position: relative;
+  min-width: 0;
+}
+
+body {
+  min-height: 100dvh;
+}
+
+h1, h2, h3, h4, h5, h6, p, span {
+  text-wrap: balance;
+  line-height: 1;
+  font-family: "adineue PRO";
+  color: #0f0f0f;
+}
+
+p {
+  text-wrap: pretty;
+}
+
+@font-face {
+  font-family: "ITC Avant Garde Gothic";
+  src: local("ITC Avant Garde Gothic Bk"), local("ITC-Avant-Garde-Gothic-Bk"), url("../../fonts/ITCAvantGardeStd-Bk.woff2") format("woff2"), url("../../fonts/ITCAvantGardeStd-Bk.woff") format("woff"), url("../../fonts/ITCAvantGardeStd-Bk.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Camisetas Font";
+  src: url("../../fonts/BocaJuniorsFont-2024-2025.ttf") format("truetype");
+}
+
+/*# sourceMappingURL=style.css.map */

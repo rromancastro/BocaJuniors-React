@@ -1,0 +1,189 @@
+@use '../vars' as vars;
+
+#cartView {
+    display: flex;
+    flex-direction: column;
+    min-height: 87vh;
+    padding: 4vw;
+    #cartViewInfo {
+        display: grid;
+        grid-template-columns: 65% 35%;
+        gap: 20px;
+    }
+}
+
+#productsView {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+#productCartView {
+    display: grid;
+    grid-template-columns: 10% 60% 30%;
+    gap: 10px;
+    background-color: rgb(242, 242, 242);
+    box-shadow: 3px 3px 0px 0px black;
+    img {
+        padding: 10px;
+        width: 90px;
+        height: 90px;
+        object-fit: contain;
+        background-color: #EAEEEF;
+    }
+}
+
+#productCartViewInfo {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5px;
+    h2 {
+        font-size: 20px;
+    }
+    h3 {
+        font-size: 17px;
+    }
+}
+
+#subtotal {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    button {
+        background-color: #AF2A2A;
+        width: 30px;
+        height: 30px;
+        display: flex;
+        border-radius: 5px;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+#quantitySelect {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    button {
+        color: grey;
+    }
+}
+
+#cartViewTitle {
+    font-size: 40px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    margin-bottom: 20px;
+}
+
+#resumenPedido {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    div {
+        display: flex;
+        justify-content: space-between;
+        p {
+            font-size: 15px;
+            font-family: vars.$fontAdihausDIN;
+        }
+    }
+    h2 {
+        font-size: 30px;
+        font-weight: 700;
+    }
+    h3 {
+        font-weight: 700;
+        font-family: vars.$fontAdihausDIN;
+        font-size: 22px;
+    }
+    button {
+        background-color: black;
+        font-family: vars.$fontAdihausDIN;
+        padding: 10px;
+        font-weight: 700;
+        box-shadow: 3px 3px 0px 0px #D1D1D1;
+        text-decoration: underline;
+    }
+}
+
+@media (max-width: 1024px) {
+
+    #cartView {
+        padding: 3vw;
+    }
+
+    #productCartViewInfo {
+        h2 {
+            font-size: 17px;
+        }
+        h3 {
+            font-size: 14px;
+        }
+    }
+
+    #subtotal {
+        h3 {
+            font-size: 13px;
+        }
+        button {
+            width: 24px;
+            height: 24px;
+        }
+    }
+
+}
+
+@media (max-width: 768px) {
+    #cartView {
+        padding: 6vw;
+        #cartViewInfo {
+            display: flex;
+            flex-direction: column;
+            gap: 50px;
+        }
+    }
+}
+
+@media (max-width: 430px) {
+    #cartViewTitle {
+        text-align: center;
+    }
+    
+    #productCartView {
+        display: grid;
+        grid-template-columns: 20% 60% 20%;
+        gap: 0px;
+        img {
+            height: 100%;
+        }
+    }
+    
+    #productCartViewInfo {
+        padding: 5px;
+        gap: 3px;
+        h2 {
+            font-size: 14px;
+        }
+        h3 {
+            font-size: 11px;
+        }
+    }
+    
+    #subtotal {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding-right: 10px;
+        gap: 0;
+        button {
+            background-color: transparent;
+        }
+    }
+    
+    #quantitySelect {
+        font-size: 15px;
+    }
+}

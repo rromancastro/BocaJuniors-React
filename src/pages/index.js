@@ -1,0 +1,6 @@
+export * from './Home'
+export * from './ProductsByCategory'
+export * from './AdidasOriginals'
+export * from './ProductsSearch'
+export * from './ProductDetail'
+export * from './CartView'

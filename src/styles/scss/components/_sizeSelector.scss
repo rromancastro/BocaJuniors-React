@@ -1,0 +1,36 @@
+@use '../vars' as vars;
+
+#sizeSelector {
+    display: flex;
+    gap: 3px;
+    flex-wrap: wrap;
+    div {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 3px;
+        height: 40px;
+        width: 90px;
+        cursor: pointer;
+        transition: .2s;
+        background-color: #ECEFF1;
+        p {
+            color: black;
+            font-size: 18px;
+            font-family: vars.$fontAdihausDIN;
+        }
+        &:hover {
+        background-color: black;
+            p {
+                color: rgb(189, 189, 189);
+            }
+        }
+    }
+    .sizeSelected {
+        background-color: black;
+        border: none;
+        p {
+            color: white;
+        }
+    }
+}

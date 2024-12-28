@@ -1,0 +1,374 @@
+@use '../vars' as vars;
+
+#productDetail {
+    width: 100%;
+    height: 86vh;
+    background-color: vars.$blanco;
+    padding: 10px 20px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 1;
+    margin-bottom: 40px;
+}
+
+#productDetailImages {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 1;
+    gap: 5px;
+    img {
+        width: 100%;
+        height: 100%;
+        background-color: #EAEEEF;
+        object-fit: contain;
+    }
+}
+
+#productDetailInfo {
+    padding: 50px 40px;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    h1 {
+        font-size: 30px;
+        font-weight: 600;
+    }
+    #productDetailInfoCategoryAndGender {
+        color: vars.$fontsGrey;
+        font-size: 14px;
+    }
+
+    #productDetailInfoBrand {
+        display: flex;
+        align-items: center;
+        gap: 4px;
+        img {
+            filter: brightness(.15);
+            width: 30px;
+        }
+        h3 {
+            font-size: 15px;
+            font-family: vars.$fontAvantGarde;
+            font-weight: 600;
+            color: #2d2d2d;
+        }
+    }
+
+    #productDetailInfoPrice {
+        font-size: 40px;
+    }
+
+    #sizeSelectorContainer {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    #productDetailInfoButton {
+        background-color: black;
+        width: 370px;
+        height: 40px;
+        box-shadow: 3px 3px 0 0 vars.$blanco, 4px 4px 0 0 rgb(0, 0, 0), 2px 4px 0 0 black, 4px 2px 0 0 black;
+        font-family: vars.$fontAdineuePro;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+        transition: .3s;
+        p {
+            color: vars.$blanco;
+        }
+        &:hover {
+            background-color: vars.$blanco;
+            border: 1px solid vars.$fontsBlack;
+            box-shadow: 3px 3px 0 0 vars.$fontsBlack, 4px 4px 0 0 rgb(0, 0, 0), 2px 4px 0 0 black, 4px 2px 0 0 black;
+            #cartIcon {
+                fill: vars.$fontsBlack;
+            }
+            p {
+                color: vars.$fontsBlack;
+            }
+        }
+    }
+}
+
+#personalizarJerseyButton {
+    background-color: vars.$blanco;
+    display: flex;
+    width: 100%;
+    height: 40px;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+    border: 1px solid black;
+    h2 {
+        font-size: 20px;
+        font-weight: 600;
+    }
+}
+
+#personalizarJersey {
+    background-color: vars.$blanco;
+    padding: 10px 20px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    img {
+        height: 400px;
+        width: 100%;
+        object-fit: contain;
+        background-color: #EAEEEF;
+    }
+}
+
+
+#personalizarJerseyUtilities {
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    p {
+        font-size: 25px;
+        letter-spacing: 1px;
+        font-weight: 700;
+    }
+    h3 {
+        font-size: 25px;
+        span {
+            color: rgb(195, 0, 0);
+            font-size: 13px;
+        }
+    }
+    input {
+        background-color: #fafafa;
+        outline: none;
+        color: vars.$fontsBlack;
+        font-family: vars.$fontAdineuePro;
+        border: 1px solid black;
+        height: 30px;
+        padding: 0 10px;
+    }
+}
+
+#personalizarJerseyResultado {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    gap: 20px;
+    top: 20%;
+    left: 38%;
+    width: 25%;
+    height: 200px;
+    p {
+        font-family: 'Camisetas Font';
+        letter-spacing: 2px;
+        text-align: center;
+        font-size: 27px;
+        &:nth-child(2) {
+            font-size: 100px;
+        }
+    }
+}
+
+#personalizarJerseyColor {
+    display: flex;
+    gap: 10px;
+    flex-direction: column;
+    h3 {
+        font-size: 25px;
+    }
+    div {
+        display: flex;
+        gap: 10px;
+        button {
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            &:nth-child(1) {
+                background-color: #ebebeb;
+            }
+            &:nth-child(2) {
+                background-color: #06338D;
+            }
+            &:nth-child(3) {
+                background-color: black;
+            }
+            &:nth-child(4) {
+                background-color: #EACC00;
+            }
+        }
+    }
+}
+
+#productosRelacionados {
+    display: flex;
+    flex-direction: column;
+    padding: 3vw;
+    gap: 20px;
+    h2 {
+        font-size: 40px;
+        font-weight: 600;
+    }
+}
+
+@media (max-width: 1024px) {
+    #productDetail {
+        min-height: 84vh;
+    }
+    
+    #productDetailImages {
+        grid-template-rows: 84vh;
+    }
+    
+    #productDetailInfo {
+        gap: 15px;
+        h1 {
+            font-size: 26px;
+        }
+        #productDetailInfoCategoryAndGender {
+            font-size: 12px;
+        }
+    
+        #productDetailInfoPrice {
+            font-size: 30px;
+        }
+    
+        #sizeSelectorContainer {
+            div {
+                height: 30px;
+            }
+        }
+    }
+    
+    #personalizarJerseyUtilities {
+        p {
+            font-size: 22px;
+        }
+        h3 {
+            font-size: 20px;
+        }
+        input {
+            height: 25px;
+        }
+    }
+    
+    #productosRelacionados {
+        display: flex;
+        flex-direction: column;
+        padding: 3vw;
+        gap: 20px;
+        h2 {
+            font-size: 40px;
+            font-weight: 600;
+        }
+    }
+    
+}
+
+@media (max-width: 768px) {
+    #productDetail {
+        height: 70vh;
+        min-height: 70vh;
+        margin-bottom: 20px;
+    }
+    
+    #productDetailImages {
+        grid-template-rows: 70vh;
+    }
+    
+    #productDetailInfo {
+        padding: 0 20px;
+        height: 70vh;
+        gap: 15px;
+        h1 {
+            font-size: 23px;
+        }
+        #productDetailInfoCategoryAndGender {
+            font-size: 11px;
+        }
+    
+        #productDetailInfoPrice {
+            font-size: 27px;
+        }
+    
+        #sizeSelectorContainer {
+            div {
+                height: 25px;
+                width: 70PX;
+                p {
+                    font-size: 15px;
+                }
+            }
+        }
+        #productDetailInfoButton {
+            width: 100%;
+        }
+    }
+
+    #personalizarJerseyButton {
+        h2 {
+            font-size: 15px;
+        }
+    }
+    
+    #personalizarJerseyUtilities {
+        gap: 14px;
+        p {
+            font-size: 18px;
+        }
+        h3 {
+            font-size: 17px;
+        }
+        input {
+            height: 25px;
+        }
+    }
+    
+    #productosRelacionados {
+        display: flex;
+        flex-direction: column;
+        padding: 5vw;
+        gap: 20px;
+        h2 {
+            font-size: 30px;
+            font-weight: 600;
+        }
+    }
+    
+}
+
+@media (max-width: 430px) {
+    #productDetail {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    #productDetailImages {
+        height: 30vh;
+        img {
+            height: 30vh;
+        }
+    }
+    
+    #productDetailInfo {
+        padding: 0 10px;
+        gap: 20px;
+        h1 {
+            font-size: 25px;
+        }
+        #sizeSelectorContainer {
+            gap: 10px;
+            div {
+                margin: 2px;
+            }
+        }
+    }
+    
+    #personalizarJersey {
+        display: flex;
+        flex-direction: column;
+    }
+}

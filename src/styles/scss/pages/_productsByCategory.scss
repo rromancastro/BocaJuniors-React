@@ -1,0 +1,87 @@
+@use '../vars' as vars;
+
+#productsByCategory {
+    background-color: vars.$blanco;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    padding: 3vw 4vw;
+}
+
+
+#productsByCategoryTitle {
+    font-size: 60px;
+    font-weight: 600;
+    letter-spacing: 2px;
+}
+
+#filterAndProducts {
+    display: grid;
+    grid-template-columns: 70% 30%;
+    gap: 20px;
+}
+
+#containerFiltrarYOrdenar {
+    h3 {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 5px;
+        font-family: vars.$fontAdihausDIN;
+        font-weight: 600;
+        border: 1px solid vars.$fontsBlack;
+        color: vars.$fontsBlack;
+        text-align: center;
+        padding: 20px;
+        font-size: 15px;
+    }
+}
+
+@media (max-width: 1024px) {
+    #productsByCategoryTitle {
+        font-size: 45px;
+    }
+
+    #filterAndProducts {
+        gap: 10px;
+    }
+
+    #containerFiltrarYOrdenar {
+        h3 {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 5px;
+            font-family: vars.$fontAdihausDIN;
+            font-weight: 600;
+            border: 1px solid vars.$fontsBlack;
+            color: vars.$fontsBlack;
+            text-align: center;
+            padding: 15px;
+            font-size: 12px;
+        }
+        .itemFilterAndSort {
+            font-size: 20px;
+        }
+    }
+}
+
+@media (max-width: 430px) {
+    #productsByCategoryTitle {
+        font-size: 40px;
+        margin-top: 20px;
+        text-align: center;
+    }
+    
+    #filterAndProducts {
+        display: flex;
+        gap: 35px;
+        flex-direction: column-reverse;
+    }
+    
+    #containerFiltrarYOrdenar {
+        h3 {
+            font-size: 15px;
+        }
+    }
+}

@@ -1,0 +1,142 @@
+@use '../vars' as vars;
+
+#nav {
+    background-color: vars.$azul;
+    width: 100%;
+    height: 8vh;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1;
+    align-items: center;
+    justify-content: center;
+    padding: 5px 20px;
+}
+
+#navBarBrand {
+    display: flex;
+    gap: 8px;
+    img {
+        width: 34px;
+    }
+    div {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        h3 {
+            font-family: vars.$fontAdineuePro;
+            color: vars.$blanco;
+            font-weight: 100;
+            font-size: 15px;
+        }
+        h4 {
+            color: vars.$blanco;
+            font-weight: 700;
+            font-family: vars.$fontAdineuePro;
+            font-size: 18px;
+        }
+    }
+}
+
+#laMitadMas1 {
+    justify-self: center;
+    font-family: vars.$fontAlfaSlabOne;
+    color: vars.$amarillo;
+    font-size: 23px;
+}
+
+#navUtilities {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 10px;
+}
+
+#searchContainer {
+    display: flex;
+    align-items: center;
+    background-color: vars.$azulOscuro;
+    padding: 2px 5px;
+    input {
+        background-color: transparent;
+        border: none;
+        width: 200px;
+        color: vars.$blanco;
+        outline: none;
+        font-size: 14px;
+
+        &::placeholder {
+            color: #69758f;
+            font-family: vars.$fontAdineuePro;
+        }
+    }
+}
+
+#searchIcon {
+    width: 13px;
+}
+
+#drawerHeader {
+    display: grid;
+    grid-template-columns: 46% 46%;
+    height: 50px;
+    align-items: center;
+    img {
+        filter: grayscale(1);
+        width: 30px;
+        &:nth-child(2) {
+            opacity: .7;
+        }
+        &:nth-child(1) {
+            opacity: .7;
+            filter: brightness(0);
+        }
+    }
+}
+
+#drawerBody {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin-top: 20px;
+    font-size: 25px;
+    p {
+        display: flex;
+        justify-content: space-between;
+        border-bottom: 1px solid black;
+        &:hover{
+            box-shadow: 0 4px 0 0 black;
+        }
+    }
+}
+
+@media (max-width: 1024px) {
+    #nav {
+        height: 10vh;
+    }
+}
+
+@media (max-width: 768px) {
+    #searchContainer {
+        input {
+            width: 80px;
+        }
+    }
+}
+
+@media (max-width: 430px) {
+    #nav {
+        height: 6vh;
+    }
+    
+    #laMitadMas1 {
+        font-size: 15px;
+    }
+    
+    #searchContainer {
+        input {
+            font-size: 12px;
+            width: 30px;
+            height: 30px;
+        }
+    }
+}

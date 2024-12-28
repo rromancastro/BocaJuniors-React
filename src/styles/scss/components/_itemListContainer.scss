@@ -1,0 +1,22 @@
+@use '../vars' as vars;
+
+#itemListContainer {
+    background-color: vars.$blanco;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: auto;
+    gap: 10px;
+}
+
+@media (max-width: 1024px) {
+    #itemListContainer {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 430px) {
+    #itemListContainer {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}

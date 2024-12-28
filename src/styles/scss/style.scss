@@ -1,0 +1,69 @@
+// sass --watch src/styles/scss/style.scss src/styles/css/style.css
+
+@use './layout/nav';
+@use './layout/footer';
+
+@use './pages/home';
+@use './pages/productsByCategory';
+@use './pages/adidasOriginals';
+@use './pages/productDetail';
+@use './pages/productsSearch';
+@use './pages/cartView';
+
+@use './components/itemListContainer';
+@use './components/itemCard';
+@use './components/loader';
+@use './components/sizeSelector';
+
+
+//fonts
+@import url('https://fonts.googleapis.com/css2?family=Alfa+Slab+One&display=swap');
+@import url('https://db.onlinewebfonts.com/c/b82329475307e0380dc1ea23f0c35266?family=adineue+PRO');
+@import url('https://db.onlinewebfonts.com/c/c0cd6ec8ce6d2bbd315a13b62ed13550?family=AdihausDIN');
+@import url('https://fonts.googleapis.com/css2?family=Sofia+Sans+Extra+Condensed:ital,wght@0,1..1000;1,1..1000&display=swap');
+
+//RESET
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    position: relative;
+    min-width: 0;
+}
+
+body {
+    min-height: 100dvh;
+}
+
+
+h1, h2, h3, h4, h5, h6, p, span {
+    text-wrap: balance;
+    line-height: 1;
+    font-family: "adineue PRO";
+    color: #0f0f0f;
+}
+
+p {
+    text-wrap: pretty;
+}
+
+//fuente adidas
+@font-face {
+    font-family: 'ITC Avant Garde Gothic';
+    src: local('ITC Avant Garde Gothic Bk'), local('ITC-Avant-Garde-Gothic-Bk'),
+        url('../../fonts/ITCAvantGardeStd-Bk.woff2') format('woff2'),
+        url('../../fonts/ITCAvantGardeStd-Bk.woff') format('woff'),
+        url('../../fonts/ITCAvantGardeStd-Bk.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+  }
+
+@font-face {
+    font-family: 'Camisetas Font';
+    src: url('../../fonts/BocaJuniorsFont-2024-2025.ttf') format('truetype');
+}
+
+@media (max-width: 430px) {
+
+}

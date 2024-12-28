@@ -1,0 +1,342 @@
+@use '../vars' as vars;
+
+#homeBannerSection {
+    width: 100%;
+    height: 89vh;
+    background-image: url('../../assets/banners/bannerHome.png');
+    background-size: cover;
+    background-position: center;
+    div {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 5px;
+        position: absolute;
+        top: 30%;
+        left: 5%;
+        p {
+            color: vars.$blanco;
+            &:nth-child(1) {
+                font-size: 30px;
+            font-family: vars.$fontAdihausDIN;
+        }
+            &:nth-child(2) {
+                font-size: 45px;
+                letter-spacing: 2px;
+                font-weight: 700;
+            }
+            &:nth-child(3) {
+                font-size: 30px;
+            }
+            &:nth-child(4) {
+                font-size: 40px;
+                width: 180px;
+                text-align: center;
+                padding: 5px 0;
+                color: vars.$fontsBlack;
+                background-color: vars.$blanco;
+            }
+        }
+    }
+}
+
+#homeMiniBanners {
+    display: grid;
+    background-color: vars.$blanco;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 1;
+    padding: 0vw 4vw;
+    padding-bottom: 4vw;
+    gap: 15px;
+    div {
+        box-shadow: 4px 4px 0px 0px black;
+        display: flex;
+        flex-direction: column;
+        overflow: hidden;
+        height: 500px;
+        gap: 10px;
+        img {
+            height: 500px;
+            transition: 1s;
+            object-fit: cover;
+        }
+        h3 {
+            transition: 1s;
+            position: absolute;
+            bottom: 0;
+            font-size: 15px;
+            text-decoration: underline;
+            text-align: center;
+            color: vars.$blanco;
+            background-color: black;
+            width: 100%;
+            transition: opacity 1s, height 1s, padding-top 1s;
+            height: 20px;
+            opacity: 0;
+        }
+        &:hover {
+            img {
+                transform: scale(1.03);
+            }
+            h3 {
+                opacity: 1;
+                height: 50px;
+                padding-top: 20px;
+            }
+        }
+    }
+}
+
+#homeSecondSection {
+    padding: 2vw 4vw;
+    background-color: vars.$blanco;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    h2 {
+        font-size: 60px;
+        font-weight: 600;
+        align-self: self-start;
+    }
+    #categoriesHome {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: auto;
+        width: 100%;
+        gap: 35px;
+        p {
+            border-bottom: 1px solid black;
+            font-size: 30px;
+            letter-spacing: 2px;
+            font-weight: 700;
+            &:hover {
+                box-shadow: 0px 5px 0px 0px black;
+            }
+        }
+    }
+}
+
+#aeroReadyBanner {
+    width: 100%;
+    height: 87vh;
+    background-image: url(../../assets/banners/cavani.jpg);
+    background-size: cover;
+}
+
+#aeroReadyBannerContent {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 50%;
+    right: 5%;
+    
+}
+
+
+#aeroReadyBannerBrand {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    align-items: center;
+    h2 {
+        color: vars.$blanco;
+        font-size: 130px;
+        font-family: vars.$fontSofiaSans;
+        letter-spacing: 20px;
+        line-height: .8;
+    }
+    img {
+        width: 100px;
+    }
+}
+
+#aeroReadyBannerEslogan {
+    color: vars.$blanco;
+    font-size: 20px;
+    align-self: flex-end;
+    font-family: vars.$fontAdihausDIN;
+    span {
+        color: vars.$fontsBlack;
+        background-color: vars.$blanco;
+        padding: 0 5px;
+        font-weight: 700;
+    }
+}
+
+@media (max-width: 1024px) {
+    #homeBannerSection {
+        height: 87vh;
+        div {
+            top: 40%;
+            gap: 0px;
+            p {
+                &:nth-child(1) {
+                    font-size: 20px;
+            }
+                &:nth-child(2) {
+                    font-size: 40px;
+                }
+                &:nth-child(3) {
+                    font-size: 24px;
+                }
+                &:nth-child(4) {
+                    font-size: 30px;
+                }
+            }
+        }
+    }
+    
+    #homeSecondSection {
+        h2 {
+            font-size: 50px;
+        }
+        #categoriesHome {
+            p {
+                font-size: 25px;
+            }
+        }
+    }
+    
+    #aeroReadyBannerContent {
+        top: 40%;
+        right: 2%;
+    }
+    
+    
+    #aeroReadyBannerBrand {
+        gap: 20px;
+        h2 {
+            font-size: 110px;
+            letter-spacing: 10px;
+        }
+    }
+    
+    #aeroReadyBannerEslogan {
+        font-size: 17px;
+    }
+}
+
+@media (max-width: 768px) {
+    #homeBannerSection {
+        div {
+            width: 50%;
+            top: 35%;
+            gap: 4px;
+        }
+    }
+    
+    #homeSecondSection {
+        h2 {
+            font-size: 40px;
+            margin-top: 20px;
+        }
+        #categoriesHome {
+            p {
+                font-size: 20px;
+            }
+        }
+    }
+
+    
+    #aeroReadyBannerContent {
+        top: 35%;
+        right: 2%;
+    }
+    
+    
+    #aeroReadyBannerBrand {
+        gap: 10px;
+        img {
+            width: 70px;
+        }
+        h2 {
+            font-size: 75px;
+            letter-spacing: 5px;
+        }
+    }
+    
+    #aeroReadyBannerEslogan {
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 430px) {
+    #homeBannerSection {
+        height: 30vh;
+        div {
+            top: 20%;
+            p {
+                &:nth-child(1) {
+                    font-size: 16px;
+            }
+                &:nth-child(2) {
+                    font-size: 22px;
+                }
+                &:nth-child(3) {
+                    font-size: 17px;
+                }
+                &:nth-child(4) {
+                    font-size: 18px;
+                    padding: 3px 0;
+                }
+            }
+        }
+    }
+    
+    #homeMiniBanners {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: 2;
+        div {
+            h3 {
+                background-color: white;
+                color: vars.$fontsBlack;
+                width: auto;
+                padding: 2px 5px;
+                font-size: 14px;
+                bottom: 10px;
+                left: 5px;
+                opacity: 1;
+            }
+        }
+    }
+    
+    #homeSecondSection {
+        padding: 2vw 6vw;
+        margin-bottom: 20px;
+        h2 {
+            font-size: 40px;
+        }
+        #categoriesHome {
+            p {
+                font-size: 15px;
+            }
+        }
+    }
+    
+    #aeroReadyBanner {
+        height: 25vh;
+    }
+    
+    #aeroReadyBannerContent {
+        top: 40%;
+        right: 4%;
+    }
+    
+    
+    #aeroReadyBannerBrand {
+        gap: 10px;
+        h2 {
+            font-size: 40px;
+            letter-spacing: 5px;
+        }
+        img {
+            width: 40px;
+        }
+    }
+    
+    #aeroReadyBannerEslogan {
+        font-size: 8px;
+    }
+    
+}

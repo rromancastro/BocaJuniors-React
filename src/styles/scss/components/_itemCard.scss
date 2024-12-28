@@ -1,0 +1,39 @@
+@use '../vars' as vars;
+
+#itemCard {
+    display: grid;
+    height: 340px;
+    grid-template-columns: 1;
+    grid-template-rows: 80% 20%;
+    margin-bottom: 30px;
+    gap: 5px;
+    img {
+        height: 300px;
+        width: 100%;
+        object-fit: contain;
+        background-color: #EAEEEF;
+    }
+    div {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+        h2 {
+            color: vars.$fontsBlack;
+            font-weight: 300;
+            font-size: 14px;
+            letter-spacing: 1px;
+        }
+        h3 {
+            color: vars.$fontsGrey;
+            font-size: 12px;
+            font-weight: 100;
+        }
+        h4 {
+            color: vars.$fontsGrey;
+            font-size: 13px;
+        }
+    }
+}
+
+@media (max-width: 768px) {
+}

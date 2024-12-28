@@ -1,0 +1,12 @@
+#loaderSpinner {
+    width: 40px;
+    height: 40px;
+    color: grey;
+}
+
+#loaderEscudo {
+    width: 15px;
+    position: absolute;
+    filter: grayscale(1);
+    opacity: .6;
+}

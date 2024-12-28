@@ -1,0 +1,35 @@
+@use '../vars' as vars;
+
+footer {
+    width: 100%;
+    height: 10vh;
+    background-color: vars.$grisAzulado;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1;
+    align-items: center;
+    padding: 0 20px;
+    div {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        img {
+            width: 25px;
+            opacity: .7;
+        }
+        h2 {
+            width: 100%;
+            text-align: center;
+            font-family: vars.$fontAlfaSlabOne;
+            color: white;
+            opacity: .6;
+        }
+        &:nth-child(3) {
+            justify-content: flex-end;
+            img {
+                width: 45px;
+                opacity: .7;
+            }
+        }
+    }
+}

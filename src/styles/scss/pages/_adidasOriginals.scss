@@ -1,0 +1,57 @@
+@use '../vars' as vars;
+
+#adidasOriginalsSection {
+        padding: 4vw;
+        background-color: vars.$blanco;
+        gap: 60px;
+        display: flex;
+        flex-direction: column;
+    h1 {
+        padding: 0;
+        font-size: 35px;
+        font-family: vars.$fontAvantGarde;
+        font-weight: 700;
+        color: vars.$fontsBlack;
+        position: absolute;
+    }
+    #imagesAdidasOriginals {
+        display: grid;
+        width: 100%;
+        justify-content: space-between;
+        grid-template-columns: repeat(4, 23%);
+        grid-template-rows: 400px;
+        img {
+            height: 350px;
+            width: 100%;
+            object-fit: cover;
+            object-position: top;
+        }
+    }
+}
+
+.imageOriginalsSkeleton {
+    &:nth-child(1) {
+        align-self: flex-end;
+    }
+    &:nth-child(3) {
+        align-self: flex-end;
+    }
+}
+
+@media (max-width: 1024px) {
+    #adidasOriginalsSection {
+        h1 {
+            font-size: 25px;
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    #adidasOriginalsSection {
+        gap: 20px;
+        h1 {
+            font-size: 30px;
+            position: relative;
+        }
+    }
+}
