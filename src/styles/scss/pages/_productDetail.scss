@@ -343,15 +343,15 @@
 @media (max-width: 430px) {
     #productDetail {
         display: flex;
-        height: 100%;
+        height: 100vh;
         min-height: 100%;
         flex-direction: column;
     }
     
     #productDetailImages {
-        height: 30vh;
+        height: 50vh;
         img {
-            height: 30vh;
+            height: 50vh;
         }
     }
     
