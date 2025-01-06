@@ -72,26 +72,6 @@
   font-family: "adineue PRO";
 }
 
-#searchContainerDrawer {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  background-color: rgb(219, 219, 219);
-  padding: 5px 5px;
-}
-#searchContainerDrawer input {
-  background-color: transparent;
-  border: none;
-  width: 200px;
-  color: #0f0f0f;
-  outline: none;
-  font-size: 14px;
-}
-#searchContainerDrawer input::placeholder {
-  color: #69758f;
-  font-family: "adineue PRO";
-}
-
 #searchIcon {
   width: 13px;
 }
@@ -147,8 +127,10 @@
   #laMitadMas1 {
     font-size: 15px;
   }
-  #searchContainer {
-    display: none;
+  #searchContainer input {
+    font-size: 12px;
+    width: 30px;
+    height: 30px;
   }
 }
 footer {
@@ -953,12 +935,6 @@ footer div:nth-child(3) img {
   grid-template-columns: 70% 30%;
 }
 
-@media (max-width: 430px) {
-  #productsSearch {
-    display: flex;
-    flex-direction: column;
-  }
-}
 #cartView {
   display: flex;
   flex-direction: column;
@@ -1132,68 +1108,6 @@ footer div:nth-child(3) img {
     font-size: 15px;
   }
 }
-#checkoutSection {
-  min-height: 80vh;
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  align-items: center;
-}
-#checkoutSection form {
-  display: flex;
-  align-items: center;
-  gap: 20px;
-  flex-direction: column;
-  width: 80vw;
-  padding: 50px 0;
-}
-#checkoutSection form div {
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-}
-#checkoutSection form div label, #checkoutSection form div h2 {
-  font-family: "Sofia Sans Extra Condensed", serif;
-  font-size: 20px;
-}
-#checkoutSection form div h2 {
-  text-align: center;
-  font-weight: 700;
-}
-#checkoutSection form div input {
-  width: 400px;
-  font-family: "Sofia Sans Extra Condensed", serif;
-  font-size: 20px;
-  outline: none;
-  background-color: #ffffff;
-  padding: 5px 13px;
-}
-
-#checkoutSectionResumenPedido {
-  display: flex;
-  flex-direction: column;
-  width: 400px;
-}
-#checkoutSectionResumenPedido h2 {
-  font-size: 20px;
-  font-family: "Sofia Sans Extra Condensed", serif;
-  font-weight: 700;
-  text-align: center;
-}
-#checkoutSectionResumenPedido div {
-  display: flex;
-  justify-content: space-between;
-}
-#checkoutSectionResumenPedido div p {
-  font-size: 20px;
-  font-family: "Sofia Sans Extra Condensed", serif;
-}
-#checkoutSectionResumenPedido h3 {
-  font-size: 20px;
-  font-family: "Sofia Sans Extra Condensed", serif;
-  font-weight: 700;
-}
-
 #itemListContainer {
   background-color: #fafafa;
   width: 100%;
@@ -1302,14 +1216,13 @@ footer div:nth-child(3) img {
   box-sizing: border-box;
   position: relative;
   min-width: 0;
-  color: #fafafa;
 }
 
 body {
   min-height: 100dvh;
 }
 
-h1, h2, h3, h4, h5, h6, p, span, input, label {
+h1, h2, h3, h4, h5, h6, p, span {
   text-wrap: balance;
   line-height: 1;
   font-family: "adineue PRO";

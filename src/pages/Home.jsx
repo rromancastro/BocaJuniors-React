@@ -84,7 +84,7 @@ export const Home = () => {
                 <div id="categoriesHome">
                     {
                         arrayCategories.map((category) => {
-                            return <Link to={category.link} key={category.slug}><p>{category.name.toLowerCase()} </p></Link>
+                            return <Link to={category.link}><p>{category.name.toLowerCase()} </p></Link>
                         })
                     }
                 </div>

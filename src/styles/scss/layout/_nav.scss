@@ -71,27 +71,6 @@
     }
 }
 
-#searchContainerDrawer {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    background-color: rgb(219, 219, 219);
-    padding: 5px 5px;
-    input {
-        background-color: transparent;
-        border: none;
-        width: 200px;
-        color: vars.$fontsBlack;
-        outline: none;
-        font-size: 14px;
-
-        &::placeholder {
-            color: #69758f;
-            font-family: vars.$fontAdineuePro;
-        }
-    }
-}
-
 #searchIcon {
     width: 13px;
 }
@@ -154,6 +133,10 @@
     }
     
     #searchContainer {
-        display: none;
+        input {
+            font-size: 12px;
+            width: 30px;
+            height: 30px;
+        }
     }
 }
