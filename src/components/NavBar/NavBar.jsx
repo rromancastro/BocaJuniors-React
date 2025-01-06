@@ -5,6 +5,8 @@ import arrayCategories from "../../helpers/categoriesArray"
 import { CartWidget } from '../CartWidget/CartWidget';
 import { Link } from 'react-router';
 import { IoIosArrowForward } from "react-icons/io";
+import { useState } from "react"
+
 import {
     Drawer,
     DrawerBody,
@@ -19,6 +21,9 @@ export const NavBar = () => {
 
     //logica barra categorias
     const { isOpen, onOpen, onClose } = useDisclosure()
+
+    //logica search
+    const [searchValue, setSearchValue] = useState("")
     
     return (
         <>
@@ -33,10 +38,13 @@ export const NavBar = () => {
             <span id='laMitadMas1'>LA MITAD +1</span>
             <div id='navUtilities'>
                 <div id='searchContainer'>
-                    <input type="text" placeholder='Buscar'/>
+                    <input type="text" placeholder='Buscar' onKeyUpCapture={(event)=>{setSearchValue(event.target.value)}}/>
+                    
+                    <Link to={`/products/search/${searchValue}`}>
                     <FaSearch color='#fafafa' id='searchIcon'/>
+                    </Link>
                 </div>
-                <CartWidget/>
+                    <CartWidget/>
                 <>
                     <GiHamburgerMenu onClick={onOpen} style={{cursor: 'pointer'}}/>
                     <Drawer isOpen={isOpen} placement='right' onClose={onClose} >
@@ -46,7 +54,14 @@ export const NavBar = () => {
                             <div id='drawerHeader'>
                                 <img src={Adidas} alt="" />
                                 <img src={Logo} alt="" />
-                                <DrawerCloseButton color={'black'}/>
+                                <DrawerCloseButton color="black"/>
+                            </div>
+                            <div id='searchContainerDrawer'>
+                                <input type="text" placeholder='Buscar' onKeyUpCapture={(event)=>{setSearchValue(event.target.value)}}/>
+                                
+                                <Link to={`/products/search/${searchValue}`}>
+                                <FaSearch fill='#000000' id='searchIcon'/>
+                                </Link>
                             </div>
                             <div id='drawerBody'>{
                                 arrayCategories.map((category) => {

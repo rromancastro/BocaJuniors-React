@@ -9,6 +9,7 @@
 @use './pages/productDetail';
 @use './pages/productsSearch';
 @use './pages/cartView';
+@use './pages/checkout';
 
 @use './components/itemListContainer';
 @use './components/itemCard';
@@ -30,6 +31,7 @@
     box-sizing: border-box;
     position: relative;
     min-width: 0;
+    color: #fafafa;
 }
 
 body {
@@ -37,7 +39,7 @@ body {
 }
 
 
-h1, h2, h3, h4, h5, h6, p, span {
+h1, h2, h3, h4, h5, h6, p, span, input, label {
     text-wrap: balance;
     line-height: 1;
     font-family: "adineue PRO";

@@ -2,6 +2,7 @@ import { useContext } from "react"
 import { FaTrash } from "react-icons/fa";
 import { Flex } from "@chakra-ui/react";
 import { CartContext } from "../contexts/CartContext";
+import { Link } from "react-router"
 import { Layout } from "../layouts";
 
 export const CartView = () => {
@@ -62,7 +63,7 @@ export const CartView = () => {
                             <p>GRATIS</p>
                         </div>
                         <h3>Total: ${cartState.reduce((acumulador, item) => acumulador + item.price * item.qtyCartItem , 0)}</h3>
-                        <button>CONTINUAR COMPRA</button>
+                        <button><Link to="/checkout">CONTINUAR COMPRA</Link></button>
                     </div>
                 </div>
             </section>}
