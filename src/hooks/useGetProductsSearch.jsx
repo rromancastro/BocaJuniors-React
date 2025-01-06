@@ -21,7 +21,7 @@ export const useGetProductsSearch = (searchValue) => {
         })
         .catch((error) => console.log(error))
         .finally(() => setLoading(false));
-    }, []);
+    }, [searchValue]);
 
     return {loading, items}
 }

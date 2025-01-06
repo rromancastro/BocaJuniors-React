@@ -4,3 +4,10 @@
     gap: 20px;
     grid-template-columns: 70% 30%;
 }
+
+@media (max-width: 430px) {
+    #productsSearch {
+        display: flex;
+        flex-direction: column;
+    }
+}

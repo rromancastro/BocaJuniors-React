@@ -19,7 +19,7 @@ export const ProductsSearch = () => {
     return (<>{
         loading ? <Loader /> : <Layout>
             <section id="productsSearch">
-                <ItemListContainer products={productsFiltred}/>
+                {items.length !== 0 ? <ItemListContainer products={productsFiltred}/> : <h1 style={{minHeight: "80vh", textAlign: "center"}}>Sin resultados</h1>}
                 <FiltrarYOrdenar itemsArray={items} setProductsFiltred={setProductsFiltred} setTitle={setTitle} setSubtitle={setSubtitle}/>
             </section>
         </Layout>

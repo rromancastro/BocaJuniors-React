@@ -1,11 +1,27 @@
 import { CartContext } from "../contexts/CartContext";
 import { useContext } from "react"
+import Swal from 'sweetalert2'
+import withReactContent from 'sweetalert2-react-content'
 import {Layout} from "../layouts"
+import { Link } from "react-router";
 
 export const Checkout = () => {
     
-    const {cartState} = useContext(CartContext)
+    const { cartState, setCartState } = useContext(CartContext)
     const totalItems = cartState.reduce((aux, item) => aux + item.qtyCartItem, 0);
+
+    const MySwal = withReactContent(Swal)
+
+    function finalizarCompra() {
+        setCartState([])
+        MySwal.fire({
+            title: <p>¡Gracias por tu compra!</p>,
+            text: "Te enviaremos el seguimiento del envío por correo electronico.",
+            icon: "success",
+            showConfirmButton: false,
+            footer: '<a href="/">Volver al inicio.</a>'
+          })
+    }
 
     return (
         <Layout>
@@ -14,20 +30,22 @@ export const Checkout = () => {
                     <div>
                         <h2>Datos Personales</h2>
                         <label htmlFor="nombreUser">Nombre</label>
-                        <input type="text" id="nombreUser" />
+                        <input required type="text" id="nombreUser" />
                         <label htmlFor="apellidoUser">Apellido</label>
-                        <input type="text" id="apellidoUser" />
+                        <input required type="text" id="apellidoUser" />
                         <label htmlFor="documentoUser">DNI</label>
-                        <input type="text" id="documentoUser" />
+                        <input required type="text" id="documentoUser" />
+                        <label htmlFor="emailUser">Correo Electronico</label>
+                        <input required type="email" id="emailUser" />
                     </div>
                     <div>
                     <h2>Datos de Envío</h2>
                         <label htmlFor="direccionUser">Calle / Barrio</label>
-                        <input type="text" id="direccionUser" />
+                        <input required type="text" id="direccionUser" />
                         <label htmlFor="nroUser">Numero</label>
-                        <input type="text" id="nroUser" />
+                        <input required type="text" id="nroUser" />
                         <label htmlFor="cpUser">Código Postal</label>
-                        <input type="text" id="cpUser" />
+                        <input required type="text" id="cpUser" />
                     </div>
                 </form>
                     <div id="checkoutSectionResumenPedido">
@@ -41,8 +59,8 @@ export const Checkout = () => {
                             <p>GRATIS</p>
                         </div>
                         <h3>Total: ${cartState.reduce((acumulador, item) => acumulador + item.price * item.qtyCartItem , 0)}</h3>
+                        <button onClick={()=>{finalizarCompra()}}>Finalizar Compra</button>
                     </div>
-                    <input type="button" />
             </section>
         </Layout>
     )
