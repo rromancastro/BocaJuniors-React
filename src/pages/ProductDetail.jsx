@@ -27,6 +27,9 @@ export const ProductDetail = () => {
     const [colorPersonalizarCamiseta, setColorPersonalizarCamiseta] = useState('#fafafa')
     const [advertenciaNumero, setAdvertenciaNumero] = useState('')
 
+    //logica talles
+    const [sizeSelected, setSizeSelected] = useState('')
+
     //logica rating
     function Rating({ rating}) {
         return (
@@ -59,7 +62,7 @@ export const ProductDetail = () => {
   
     const handleAddProduct = () => {
       setCount(count + 1);
-      addItem(product);
+      addItem({...product, sizeSelected: sizeSelected});
     };
 
 
@@ -85,7 +88,7 @@ export const ProductDetail = () => {
                         <h2 id="productDetailInfoPrice">${product.price}</h2>
                         <div id="sizeSelectorContainer">
                             <h2>Size / Tamaño</h2>
-                            <SizeSelector typeProduct={product.category} gender={product.gender}/>
+                            <SizeSelector typeProduct={product.category} gender={product.gender} setSizeSelected={setSizeSelected} sizeSelected={sizeSelected}/>
                         </div>
                         <button id="productDetailInfoButton" onClick={() => handleAddProduct()}><FaCartPlus id="cartIcon" /><p>Agregar Al Carrito</p></button>
                     </div>

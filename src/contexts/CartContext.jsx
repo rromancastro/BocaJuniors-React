@@ -6,19 +6,26 @@ export const CartProvider = ({ children }) => {
   const [cartState, setCartState] = useState([]);
 
   const addItem = (product) => {
-    const isProductInState = cartState.find((item) => item.id === product.id);
-
+    const isProductInState = cartState.find(
+      (item) => item.id === product.id && item.sizeSelected === product.sizeSelected
+    );
+  
     if (isProductInState) {
       setCartState(
         cartState.map((item) =>
-          item.id === product.id
+          item.id === product.id && item.sizeSelected === product.sizeSelected
             ? { ...item, qtyCartItem: item.qtyCartItem + 1 }
             : item
         )
       );
     } else {
-      setCartState([...cartState, { ...product, qtyCartItem: 1 }]);
+      setCartState([
+        ...cartState,
+        { ...product, qtyCartItem: 1 },
+      ]);
     }
+  
+    console.log(product);
   };
 
   const removeItem = (product) => {

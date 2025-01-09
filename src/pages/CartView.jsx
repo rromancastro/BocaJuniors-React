@@ -40,7 +40,7 @@ export const CartView = () => {
                                         <img src={data.images[0]} alt={data.id} />
                                         <div id="productCartViewInfo">
                                             <h2>{data.title}</h2>
-                                            <h3>${data.price}</h3>
+                                            <h3>${data.price} Talle: {data.sizeSelected}</h3>
                                             <div id="quantitySelect"><button onClick={() => {handleRemoveItem(data)}}>-</button><p>{data.qtyCartItem}</p><button onClick={() => {handleAddItem(data)}}>+</button></div>
                                         </div>
                                         <div id="subtotal">
